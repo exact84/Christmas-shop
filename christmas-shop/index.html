@@ -1,123 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="icon" type="image/png" sizes="24x24" href="./img/snowflake.svg">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="icon" type="image/png" sizes="24x24" href="./img/snowflake.svg">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="header" >
-            <a href="index.html" class="nav-left-item">
-                <img src="img/snowflake.svg" alt="Logo Icon" class="logo-icon">
-                <span >The Gifts</span>
-            </a>
-            <span class ="nav-bar">
-                <span class="nav-item">Gifts</span>
-                <span class="nav-item">About</span>
-                <span class="nav-item">Best</span>
-                <span class="nav-item">Contacts</span>
-            </span>
-        </nav>
-    </header>
+<div class="wrapper">
+  <header>
+    <nav class="nav" >
+      <a href="index.html" class="nav-left-item">
+        <img src="img/snowflake.svg" alt="Logo Icon" class="logo-icon">
+        <span>The Gifts</span>
+      </a>
+      <span class ="nav-bar">
+        <a class="nav-item" href="./gifts/gifts.html">Gifts</a>
+        <span class="nav-item">About</span>
+        <span class="nav-item">Best</span>
+        <span class="nav-item"><a href="#contacts">Contacts</a></span>
+      </span>
+    </nav>
+  </header>
 
-    <main class="main">
+  <main class="main">
 
-        <section class="hero">
-            <div class="hero-div">
-                <div class="caption">Merry Christmas</div>
-                <div class="header1">
-                    <h1>Gift yourself the magic of new possibilities</h1>
-                </div>
-                <!-- <a href="gifts/index.html" class="hero__button">Explore Magical Gifts</a> -->
-                <div class="button">
-                    <div class="btn-text">
-                        <a href="gifts.html">Explore Magical Gifts</a> 
-                    </div>
-                </div>
-                <div class="caption">
-                    and Happy New Year
-                </div>
+    <section class="hero" id="hero">
+      <div class="hero-div">
+        <div class="caption">Merry Christmas</div>
+        <div class="header1">
+          <h1>Gift yourself the magic of new possibilities</h1>
+        </div>
+        <!-- <a href="gifts/index.html" class="hero__button">Explore Magical Gifts</a> -->
+        <div class="button">
+          <div class="btn-text">
+            <a href="gifts.html">Explore Magical Gifts</a> 
+          </div>
+        </div>
+        <div class="caption">
+          and Happy New Year
+        </div>
+      </div>
+    </section>
+  
+    <section class="about" id="abut">
+      <div class="about-div">
+        <div class="about-txt">
+          <div class="about-txt2">
+            <div class="about-caption">About</div>
+            <div class="about-header2"><h2>Unleash your inner superhero!</h2></div>
+            <div class="about-p">This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique gifts that will help you improve your life.</div>
+          </div>
+        </div>
+        <div class="about-img">
+          <img src="./img/santa.png" alt="santa">
+        </div>
+      </div>
+
+    </section>
+  
+    <section class="slider" id="slider">
+      <div class="slider-div">
+        <div class="slider-head">
+          <div class="caption">Become Happier!</div>
+          <div class="header2">in the new 2025</div>
+        </div>
+        <div class="slider-row">
+          <div class="slider-slider">
+            <span class="slider-txt">LIVE</span>
+            <img class="slider-img" src="./img/snowman.png" alt="snowman">
+            <span class="slider-txt">CREATE</span>
+            <img class="slider-img" src="./img/christmas-trees.png" alt="christmas-trees">
+            <span class="slider-txt">LOVE</span>
+            <img class="slider-img" src="./img/christmas-tree-ball.png" alt="christmas-tree-ball">
+          </div>
+        </div>
+        <div class="slider-buttons">
+          <div class="slider-button">
+            <img class="slider-button" src="./img/arrow-left.svg" alt="left">
+          </div>
+          <div class="slider-button">
+            <img class="slider-button" src="./img/arrow-right.svg" alt="right">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="best" id="best-gifts">
+      <div class="best-div">
+        <div class="slider-head">
+          <div class="caption">Best Gifts</div>
+          <div class="header2">especially for you</div>
+        </div>
+        <div></div>
+      </div>
+    </section>
+
+    <section class="cta" id="cta">
+      <div class="cta-div">
+        <div class="cta-div-inner">
+          <div class="header2">Ready to start your journey to a better version of yourself?</div>
+          <div class="button">
+            <div class="btn-text">
+              <a href="gifts.html">Explore Magical Gifts</a> 
             </div>
-        </section>
-    
-        <section class="about">
-            <div class="about-div">
-                <div class="about-txt">
-                    <div class="about-txt2">
-                        <div class="about-about">About</div>
-                        <div class="about-unleash"><h2>Unleash your inner superhero!</h2></div>
-                        <div class="about-this">This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique gifts that will help you improve your life.</div>
-                    </div>
-                </div>
-                <div class="about-img">
-                    <img src="./img/santa.png" alt="santa">
-                </div>
+          </div>
+          <div>
+            <div class="caption">The New Year is Coming Soon...</div>
+            <div class="timer">
+              47 | 5 | 34 | 12
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        </section>
-    
-        <section class="slider">
-            <div class="slider-div">
-                <div class="slider-head">
-                    <div class="caption">Become Happier!</div>
-                    <div class="header2">in the new 2025</div>
-                </div>
-                <div class="slider-row">
-                    <div class="slider-slider">
-                        <span class="slider-txt">LIVE</span>
-                        <img class="slider-img" src="./img/snowman.png" alt="snowman">
-                        <span class="slider-txt">CREATE</span>
-                        <img class="slider-img" src="./img/christmas-trees.png" alt="christmas-trees">
-                        <span class="slider-txt">LOVE</span>
-                        <img class="slider-img" src="./img/christmas-tree-ball.png" alt="christmas-tree-ball">
-                    </div>
-                </div>
-                <div class="slider-buttons">
-                    <div class="slider-button">
-                        <img class="slider-button" src="./img/arrow-left.svg" alt="left">
-                    </div>
-                    <div class="slider-button">
-                        <img class="slider-button" src="./img/arrow-right.svg" alt="right">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="best">
-            <div class="best-div">
-                <div class="slider-head">
-                    <div class="caption">Best Gifts</div>
-                    <div class="header2">especially for you</div>
-                </div>
-                <div></div>
-            </div>
-        </section>
-
-        <section class="cta">
-            <div class="cta-div">
-                <div class="cta-div-inner">
-                    <div class="header2">Ready to start your journey to a better version of yourself?</div>
-                    <div class="button">
-                        <div class="btn-text">
-                            <a href="gifts.html">Explore Magical Gifts</a> 
-                        </div>
-                    </div>
-                    <div>
-                        <div class="caption">The New Year is Coming Soon...</div>
-                        <div class="timer">
-                            47 | 5 | 34 | 12
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-<footer>
-
-</footer>
+  <footer class="footer" id="contacts">
+    <div class="footer-div">
+      <div class="footer-div-top">
+        <div class="footer-div1">
+          <img src="./img/santa-claus.svg" alt="santa-claus">
+          <div class="footer-action">+375 (29) 111-22-33</div>
+          <h3 class="text-center">Call Us</h3>
+        </div>
+        <div class="footer-div1">
+          <img src="./img/christmas-tree.svg" alt="christmas-tree">
+          <div class="footer-action">Magic forest</div>
+          <h3 class="text-center">Meet Us</h3>
+        </div>
+        <!-- <div class="footer-div1"> -->
+          <a href="mailto:gifts@magic.com" target="_blank" class="footer-div1">
+          
+          <img src="./img/snake.svg" alt="snake">
+          <div class="footer-action">gifts@magic.com</div>
+          <h3 class="text-center">Write Us</h3>
+        </a>
+        <!-- </div> -->
+      </div>
+      <div class="footer-div-bottom">
+        <div class="footer-div-socials">
+          <a class="footer-div-socials-div" href="https://web.telegram.org/" target="_blank"><img src="./img/telegram.svg" alt="telegram"></a>
+          <a class="footer-div-socials-div" href="https://www.facebook.com/" target="_blank"><img src="./img/facebook.svg" alt="facebook"></a>
+          <a class="footer-div-socials-div" href="https://www.instagram.com/" target="_blank"><img src="./img/instagram.svg" alt="instagram"></a>
+          <a class="footer-div-socials-div" href="https://twitter.com/" target="_blank"><img src="./img/X.svg" alt="X"></a>
+        </div>
+        <div class="footer-p">© Copyright 2025, All Rights Reserved</div>
+        <a class="footer-caption"  href="https://rs.school/" target="_blank">Made in Rolling
+          Scopes School>Made in Rolling Scopes School</a>
+      </div>
+    </div>
+  </footer>
+</div>  
 </body>
 </html>
