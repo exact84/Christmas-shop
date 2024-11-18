@@ -17,8 +17,8 @@
       </a>
       <span class ="nav-bar">
         <a class="nav-item" href="./gifts/gifts.html">Gifts</a>
-        <span class="nav-item">About</span>
-        <span class="nav-item">Best</span>
+        <span class="nav-item"><a href="#about">About</a></span>
+        <span class="nav-item"><a href="#best-gifts">Best</a></span>
         <span class="nav-item"><a href="#contacts">Contacts</a></span>
       </span>
     </nav>
@@ -44,12 +44,12 @@
       </div>
     </section>
   
-    <section class="about" id="abut">
+    <section class="about" id="about">
       <div class="about-div">
         <div class="about-txt">
           <div class="about-txt2">
             <div class="about-caption">About</div>
-            <div class="about-header2"><h2>Unleash your inner superhero!</h2></div>
+            <h2 class="about-header2">Unleash your inner superhero!</h2>
             <div class="about-p">This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique gifts that will help you improve your life.</div>
           </div>
         </div>
@@ -61,6 +61,7 @@
     </section>
   
     <section class="slider" id="slider">
+      <h2 class="visually-hidden">Скрытый заголовок</h2>
       <div class="slider-div">
         <div class="slider-head">
           <div class="caption">Become Happier!</div>
@@ -76,6 +77,7 @@
             <img class="slider-img" src="./img/christmas-tree-ball.png" alt="christmas-tree-ball">
           </div>
         </div>
+        <!-- <h5> </h5> -->
         <div class="slider-buttons">
           <div class="slider-button">
             <img class="slider-button" src="./img/arrow-left.svg" alt="left">
@@ -88,19 +90,53 @@
     </section>
 
     <section class="best" id="best-gifts">
+      <!-- <h2 class="visually-hidden">Скрытый заголовок</h2> -->
       <div class="best-div">
         <div class="slider-head">
           <div class="caption">Best Gifts</div>
           <div class="header2">especially for you</div>
         </div>
-        <div></div>
+        <div class="best-cards">
+          <div class="best-card">
+            <img class="best-img" src="./img/gift-for-work.png" alt="gift-for-work">
+            <div class="best-footer">
+              <h4 class="header4">for work</h4>
+              <h3 class="h3-black">console.log guru</h3>
+            </div>
+          </div>
+
+          <div class="best-card">
+            <img class="best-img" src="./img/gift-for-health.png" alt="gift-for-health">
+            <div class="best-footer">
+              <h4 class="header4">for health</h4>
+              <h3 class="h3-black">Hydration Bot</h3>
+            </div>
+          </div>
+
+          <div class="best-card">
+            <img class="best-img" src="./img/gift-for-work.png" alt="gift-for-work">
+            <div class="best-footer">
+              <h4 class="header4">for work</h4>
+              <h3 class="h3-black">merge master</h3>
+            </div>
+          </div>
+
+          <div class="best-card">
+            <img class="best-img" src="./img/gift-for-harmony.png" alt="gift-for-harmony">
+            <div class="best-footer">
+              <h4 class="header4">for harmony</h4>
+              <h3 class="h3-black">Spontaneous Coding Philosopher</h3>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
     <section class="cta" id="cta">
       <div class="cta-div">
         <div class="cta-div-inner">
-          <div class="header2">Ready to start your journey to a better version of yourself?</div>
+          <h2 class="header2">Ready to start your journey to a better version of yourself?</h2>
           <div class="button">
             <div class="btn-text">
               <a href="gifts.html">Explore Magical Gifts</a> 
@@ -108,8 +144,26 @@
           </div>
           <div>
             <div class="caption">The New Year is Coming Soon...</div>
-            <div class="timer">
-              47 | 5 | 34 | 12
+            <div class="cta-timer">
+              <div class="cta-timer-item">
+                <h2 >47</h2>
+                <h4 >days</h4>
+              </div>
+              <div class="cta-sep"></div>
+              <div class="cta-timer-item">
+                <h2 >5</h2>
+                <h4 >hours</h4>
+              </div>
+              <div class="cta-sep"></div>
+              <div class="cta-timer-item">
+              <h2 >34</h2>
+              <h4 >minutes</h4>
+            </div>
+              <div class="cta-sep"></div>
+              <div class="cta-timer-item">
+              <h2 >12</h2>
+              <h4 >seconds</h4>
+            </div>
             </div>
           </div>
         </div>
@@ -120,16 +174,18 @@
   <footer class="footer" id="contacts">
     <div class="footer-div">
       <div class="footer-div-top">
-        <div class="footer-div1">
-          <img src="./img/santa-claus.svg" alt="santa-claus">
-          <div class="footer-action">+375 (29) 111-22-33</div>
-          <h3 class="text-center">Call Us</h3>
-        </div>
-        <div class="footer-div1">
+        <!-- <div class="footer-div1"> -->
+            <a href="tel:+37529112233" target="_blank" class="footer-div1">
+            <img src="./img/santa-claus.svg" alt="santa-claus">
+            <div class="footer-action">+375 (29) 111-22-33</div>
+            <h3 class="text-center">Call Us</h3>
+         </a>
+        <!-- </div> -->
+        <a href="https://maps.app.goo.gl/ptiTfufjRoVUKaYNA" target="_blank" class="footer-div1">
           <img src="./img/christmas-tree.svg" alt="christmas-tree">
           <div class="footer-action">Magic forest</div>
           <h3 class="text-center">Meet Us</h3>
-        </div>
+        </a>
         <!-- <div class="footer-div1"> -->
           <a href="mailto:gifts@magic.com" target="_blank" class="footer-div1">
           
@@ -147,8 +203,7 @@
           <a class="footer-div-socials-div" href="https://twitter.com/" target="_blank"><img src="./img/X.svg" alt="X"></a>
         </div>
         <div class="footer-p">© Copyright 2025, All Rights Reserved</div>
-        <a class="footer-caption"  href="https://rs.school/" target="_blank">Made in Rolling
-          Scopes School>Made in Rolling Scopes School</a>
+        <a class="footer-caption"  href="https://rs.school/" target="_blank">Made in Rolling Scopes School</a>
       </div>
     </div>
   </footer>
