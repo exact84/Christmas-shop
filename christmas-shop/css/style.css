@@ -208,7 +208,7 @@ h2{
   gap: var(--Space-0, 0px);
   align-self: stretch;
   background: url('../img/bg-snow.png') center / cover , #FF4646;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 
 .about-div{
@@ -446,7 +446,7 @@ border: 1px solid var(--Static-White-40, rgba(255, 255, 255, 0.40));
   align-items: center;
   gap: var(--Space-0, 0px);
   align-self: stretch;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 
 .best-div{
