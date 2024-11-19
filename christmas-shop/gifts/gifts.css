@@ -142,11 +142,11 @@ h2{
   background: #181C29;
   color: #FFF;
   margin: 12px 0;
-  transition: opacity 0.5s ease-in-out;  
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .button:hover {
-  background: #FFF;
+  background-color: #FFF;
   color: black;
 }
 
@@ -227,6 +227,7 @@ footer{
   align-items: center;
   gap: var(--Space-60, 60px);
   /* align-self: stretch; */
+  width: 100%; /* помогло */
 }
 
 .footer-div-top{
@@ -339,4 +340,8 @@ background: var(--Content-Background, #ECF3F8);
 	clip: rect(0, 0, 0, 0);
 	white-space: nowrap; /* Для предотвращения переноса текста */
 	border: 0;
+}
+
+.no-pointer {
+  cursor: default; /* Указатель мыши остаётся обычным */
 }

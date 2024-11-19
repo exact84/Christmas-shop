@@ -8,6 +8,11 @@
   src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+}
+
 html {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
@@ -178,11 +183,11 @@ h2{
   background: #181C29;
   color: #FFF;
   margin: 12px 0;
-  transition: opacity 0.5s ease-in-out;  
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .button:hover {
-  background: #FFF;
+  background-color: #FFF;
   color: black;
 }
 
@@ -398,7 +403,7 @@ h2{
 text-align: center;
 
 /* Slider Text */
-font-family: Montserrat;
+font-family: Montserrat-SemiBold;
 font-size: 80px;
 font-style: normal;
 font-weight: 600;
@@ -630,6 +635,7 @@ footer{
   align-items: center;
   gap: var(--Space-60, 60px);
   /* align-self: stretch; */
+	width: 100%; /* помогло */
 }
 
 .footer-div-top{
@@ -643,6 +649,7 @@ footer{
 }
 
 .footer-div1{
+	text-decoration: none;
   display: flex;
   padding: var(--Space-20, 20px);
   flex-direction: column;
@@ -650,6 +657,7 @@ footer{
   align-items: center;
   gap: var(--Space-12, 12px);
   flex: 1 0 0;
+	width: 100%; /* не помогает */
 
   border-radius: 20px;
   background: var(--Content-Background, #ECF3F8);
@@ -742,4 +750,8 @@ background: var(--Content-Background, #ECF3F8);
 	clip: rect(0, 0, 0, 0);
 	white-space: nowrap; /* Для предотвращения переноса текста */
 	border: 0;
+}
+
+.icon:hover {
+  fill: red; /* Изменяет цвет заливки */
 }
