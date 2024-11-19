@@ -422,15 +422,32 @@ align-self: stretch;
 
 .slider-button{
   display: flex;
-width: 56px;
-height: 56px;
-padding: var(--Space-0, 0px);
-justify-content: center;
-align-items: center;
-gap: var(--Space-0, 0px);
-border-radius: 20px;
-border: 1px solid var(--Static-White-40, rgba(255, 255, 255, 0.40));
+	width: 56px;
+	height: 56px;
+	padding: var(--Space-0, 0px);
+	justify-content: center;
+	align-items: center;
+	gap: var(--Space-0, 0px);
+	border-radius: 20px;
+	border: 1px solid var(--Static-White-40, rgba(255, 255, 255, 0.40));
+	opacity: 1;
 }
+
+.slider-button-activ{
+	transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+.slider-button-activ:hover{
+	background-color: #fff;
+}
+.slider-button-activ:hover svg path{
+	stroke: #ff4646;
+	transition: stroke 0.5s ease;
+}
+
+/* .slider-button-inactive{
+	opacity: 0.4;
+} */
 
 
 .slider-foot{
