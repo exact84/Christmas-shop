@@ -13,13 +13,22 @@
   src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 html {
-	box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: 1440px;
+  box-sizing: border-box;
 	scroll-behavior: smooth;
 }
 
-body {
-  max-width: 1440px;
+/* body {
+  width: 1440px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -27,7 +36,7 @@ body {
 
   margin: auto;
   padding: 0;
-}
+} */
 .wrapper{
 	max-width: 1440px;
 	margin: 0 auto;
@@ -117,19 +126,16 @@ a {
   padding: 60px 8px;
   display: flex;
   justify-content: center;
+  /* height: 524px; */
 }
-
-  /* margin: 0 auto; */
-/* background: url('../img/bg-snow.png') lightgray 50% / cover no-repeat, 
-url('../img/bg-ball.png') lightgray 50% / cover no-repeat,  #FF4646; */
-
 
 .hero-div{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 70px 0;  /* коррект*/
+  padding: 60px 0;  /* коррект*/
   max-width: 426px;
+  row-gap: 12px;
 }
 
 .header1{
@@ -138,10 +144,10 @@ url('../img/bg-ball.png') lightgray 50% / cover no-repeat,  #FF4646; */
   justify-content: center; 
    align-items: center;
   text-align: center;
-  gap: 12px;
+  /* gap: 12px; */
   margin: auto;
   color: #FFF;
-  align-self: stretch;
+  /* align-self: stretch; */
   padding: 0px 0px;
   margin: 0 0;
 }
@@ -156,10 +162,6 @@ h1{
   text-transform: uppercase;
   padding: 0px 0px;
   margin: 0;
-}
-
-h2{
-	margin: 0;
 }
 
 /* .hero-text-caption{
@@ -182,7 +184,7 @@ h2{
   border-radius: 20px;
   background: #181C29;
   color: #FFF;
-  margin: 12px 0;
+  /* margin: 12px 0; не нужен потому что есть row-gap*/ 
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
@@ -239,7 +241,6 @@ h2{
 }
 
 .about-txt2{
-
   display: flex;
   max-width: 426px;
   padding: var(--Space-60, 60px) var(--Space-0, 0px);
@@ -350,7 +351,7 @@ h2{
   line-height: 100%; /* 24px */
   letter-spacing: 1.2px;
 	/* padding-bottom: 12px; correct */
-	margin-top: 100px 0;
+	/* margin-top: 100px 0; */
 }
 
 .header2{
@@ -504,6 +505,11 @@ align-self: stretch;
   background: var(--Content-Background, #ECF3F8);
 }
 
+.best-card:hover{
+  cursor: grab;
+  color: red;
+}
+
 .best-img{
 	display: flex;
 	width: 310px;
@@ -531,7 +537,8 @@ align-self: stretch;
 }
 
 .header4{
-  color: var(--Tag-Purple, #4361FF);
+  color: var(--Static-White, #FFF);
+  text-align: center;
 
   /* Header 4 */
   font-family: Montserrat;
@@ -556,6 +563,19 @@ h3{
 	margin: 0;
 }
 
+h2{
+	margin: 0;
+  color: var(--Static-White, #FFF);
+/* Header 2 */
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 152%; /* 36.48px */
+letter-spacing: 3.84px;
+text-transform: uppercase;
+}
+
 .text-line-clamp{ 
 	/* для header3 */
 	display: -webkit-box;
@@ -573,25 +593,28 @@ h3{
 .cta {
   background: url('../img/bg-snow.png') center / cover no-repeat,
 	url('../img/bg-forest.png') center / cover no-repeat, #FF4646;
-	width: 1424px;
+	width: 100vw; /* 100%;/* 1424px; */
 	display: flex;
-	padding: var(--Space-60, 60px) var(--Space-8, 8px);
-	flex-direction: column;
+  flex-direction: column;
+	padding: 60px 8px;
 	align-items: center;
-	gap: var(--Space-0, 0px);
-	align-self: stretch;
+  justify-content: flex-start;
+	gap: 0px;
 	border-radius: 0px 0px 20px 20px;
+  /* height: 668px; */
+  margin: 0 auto;
+  max-width: 1424px;
 }
 
 .cta-div{
   display: flex;
-  max-width: 1276px;
-  padding: var(--Space-60, 60px) var(--Space-0, 0px);
   flex-direction: column;
   align-items: center;
+  /* max-width: 1276px; */
+  padding: var(--Space-60, 60px) var(--Space-0, 0px);
   gap: var(--Space-0, 0px);
-  /* align-self: stretch;  - из-за этого не центрируется */
   border-radius: 20px;
+  width: 100%;
 }
 
 .cta-div-inner{
@@ -601,36 +624,68 @@ h3{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: var(--Space-20, 20px);
-  align-self: stretch;
+  gap: 20px;
+}
+
+
+.cta-div-inner .button {
+  margin: -3px 0 0px 0;
 }
 
 .cta-timer{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr auto);
+  padding: 10px 12px 12px 12px;
+  background: rgba(255, 255, 255, 0.40);
+  border-radius: 20px;
+  align-items: center;
+  justify-items: center; /* работает */
+  gap: 0px;
+  width: 320px;
+  margin-top: 8px;
+}
+
+.cta-sep{
+	position: relative;
+	border-left: 1px solid #FFF;
+	width: 0px;
+	height: 20px;
+}
+
+.cta-timer-item{
+  color: #FFF;
+  /* justify-content: center; */
+  justify-items: center; /* работает */
+}
+
+.cta-timer2{
   display: flex;
 	/* flex-direction: row; */
   padding: 8px 12px 12px 12px;
   align-items: center;
-  gap: var(--Space-0, 20px);
+  /* gap: var(--Space-0, 20px); */
   border-radius: 20px;
   background: var(--Static-White-40, rgba(255, 255, 255, 0.40));
-	justify-content: center; /* Центрируем все элементы в контейнере */
+	justify-content: flex-start; /* Центрируем все элементы в контейнере */
 	margin: 0;
 }
 
-.cta-timer-item {
+.cta-timer-item2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 80px;
+	height: 100%;
+}
+
+.cta-timer-item-old {
 	display: flex;
 	flex-direction: column; /* Элементы располагаются в колонку */
 	align-items: center;   /* Центрируем элементы внутри столбика */
 	gap: 1px;             /* Расстояние между элементами в столбике */
 	color: #FFF;
 	margin: 0;
-}
-
-.cta-sep{
-	display: block;
-	width: 1px;
-	height: 20px;
-	background: #FFF;
 }
 
 footer{
@@ -651,7 +706,6 @@ footer{
   flex-direction: column;
   align-items: center;
   gap: var(--Space-60, 60px);
-  /* align-self: stretch; */
 	width: 100%; /* помогло */
 }
 
@@ -664,6 +718,10 @@ footer{
   align-self: stretch;
   border-radius: 60px;
 }
+
+/* .footer-div-top a{
+  color: red;
+} */
 
 .footer-div1{
 	text-decoration: none;
@@ -693,7 +751,7 @@ background: var(--Content-Background, #ECF3F8);
 } */
 
 .footer-action{
-  color: var(--Dark, #181C29);
+  /* color: var(--Dark, #181C29); */
   text-align: center;
 	white-space: nowrap;
 
@@ -705,6 +763,11 @@ background: var(--Content-Background, #ECF3F8);
   line-height: 152%; /* 36.48px */
   letter-spacing: 3.84px;
   text-transform: uppercase;
+}
+
+.footer-div1:hover{
+  /* cursor: grab; */
+  color: red;
 }
 
 .footer-div-bottom{
@@ -755,6 +818,10 @@ background: var(--Content-Background, #ECF3F8);
   font-weight: 400;
   line-height: 100%; /* 24px */
   letter-spacing: 1.2px;
+}
+
+.footer-caption:hover{
+  color: red;
 }
 
 .visually-hidden {
