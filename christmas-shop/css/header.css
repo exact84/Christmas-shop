@@ -51,13 +51,20 @@ header{
   border-radius: 12px;
 }
 
-.nav-item:hover{
+/* .hover-enabled .nav-item:hover{
   background: rgba(255, 70, 70, 0.10);
-}
+} */
 
-.nav-bar li:first-child .nav-item{
+@media (pointer: fine) and (hover: hover) { 
+  .nav-item:hover{
   background: rgba(255, 70, 70, 0.10);
-  pointer-events: none;
+  }
+ }
+
+ @media (hover: none) and (pointer: coarse) {
+  .button {
+    background-color: initial;
+  }
 }
 
 label {

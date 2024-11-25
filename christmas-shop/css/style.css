@@ -50,10 +50,17 @@
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.button:hover {
+/* .button:hover {
   background-color: #FFF;
   color: black;
-}
+} */
+
+@media (pointer: fine) and (hover: hover) { 
+  .button:hover {
+    background-color: #FFF;
+    color: black;
+  }
+ }
 
 .btn-text{
   /* text-align: center; */
@@ -313,13 +320,23 @@ text-transform: uppercase;
 	transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-.slider-button-activ:hover{
+/* .slider-button-activ:hover{
 	background-color: #fff;
 }
 .slider-button-activ:hover svg path{
 	stroke: #ff4646;
 	transition: stroke 0.3s ease;
-}
+} */
+
+@media (pointer: fine) and (hover: hover) { 
+  .slider-button-activ:hover{
+    background-color: #fff;
+  }
+  .slider-button-activ:hover svg path{
+    stroke: #ff4646;
+    transition: stroke 0.3s ease;
+  }
+ }
 
 /* .slider-button-inactive{
 	opacity: 0.4;
@@ -405,11 +422,9 @@ text-transform: uppercase;
   gap: var(--Space-8, 8px);
   flex: 1 0 0;
   align-self: stretch;
-
   border-radius: 20px;
   background: var(--Static-White, #FFF);
 }
-
 
 .text-line-clamp{ 
 	/* для header3 */
@@ -423,7 +438,6 @@ text-transform: uppercase;
 
   align-self: stretch;
 }
-
 
 .cta {
   background: url('../img/bg-snow.png') center / cover no-repeat,

@@ -3,6 +3,11 @@
 @import url("../css/general.css");
 
 
+.nav-bar li:first-child .nav-item{
+  background: rgba(255, 70, 70, 0.10);
+  pointer-events: none;
+}
+
 .gifts{
   background: url('../img/bg-garland.png') top no-repeat, #FF4646;
   background-size: contain;
@@ -58,9 +63,21 @@
   text-transform: uppercase;
 }
 
-.gifts-tab:hover{
+/* .gifts-tab:hover{
   background: rgba(255, 255, 255, 0.2);
-}
+} */
+
+@media (pointer: fine) and (hover: hover) { 
+  .gifts-tab:hover{
+  background: rgba(255, 255, 255, 0.2);
+  }
+ }
+
+ /* @media (hover: none) and (pointer: coarse) {
+  .button {
+    background-color: initial;
+  }
+} */
 
 .gifts-tab:first-child{
   background: rgba(255, 255, 255, 0.2); /* не рабоатет */
