@@ -135,10 +135,21 @@ footer{
   letter-spacing: 1.2px;
 }
 
-.footer-caption:hover{
-  color: red;
+.footer-div-socials-div{
+	transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-.icon:hover {
-  fill: red; /* Изменяет цвет заливки */
+@media (pointer: fine) and (hover: hover) { 
+  .footer-caption:hover{
+    color: red;
+  }
+
+  .footer-div-socials-div:hover{
+    stroke: red;
+    cursor: pointer;
+  }
+
+  .icon:hover {
+    fill: red; /* Изменяет цвет заливки */
+  }
 }

@@ -30,7 +30,7 @@
 }
 
 .gifts-header{
-  /* padding: 0px 10px; */
+  padding: 0px 40px;
   align-self: center;
   margin: 0;
   /* margin-left: 40px; */
@@ -67,12 +67,6 @@
   background: rgba(255, 255, 255, 0.2);
 } */
 
-@media (pointer: fine) and (hover: hover) { 
-  .gifts-tab:hover{
-  background: rgba(255, 255, 255, 0.2);
-  }
- }
-
  /* @media (hover: none) and (pointer: coarse) {
   .button {
     background-color: initial;
@@ -107,10 +101,10 @@
   background: var(--Content-Background, #ECF3F8);
 }
 
-.gifts-card:hover{
+/* .gifts-card:hover{
   cursor: grab;
   color: red;
-}
+} */
 
 .gifts-img{
 	display: flex;
@@ -155,3 +149,23 @@ h2{
 	margin: 0;
 }
 
+@media screen and (max-width: 380px){
+  .gifts-tab{
+    padding: 8px;
+  }
+  .gifts-tabs{
+    padding: 0;
+    gap: 0px;
+  }
+}
+
+@media (pointer: fine) and (hover: hover) { 
+
+  .gift-card:hover{
+    cursor: grab;
+    color: red;
+  }
+  .gifts-tab:hover{
+    background: rgba(255, 255, 255, 0.2);
+    }
+}

@@ -55,18 +55,6 @@ header{
   background: rgba(255, 70, 70, 0.10);
 } */
 
-@media (pointer: fine) and (hover: hover) { 
-  .nav-item:hover{
-  background: rgba(255, 70, 70, 0.10);
-  }
- }
-
- @media (hover: none) and (pointer: coarse) {
-  .button {
-    background-color: initial;
-  }
-}
-
 label {
   display: none;
 }
@@ -150,8 +138,9 @@ a {
   }
 
 }
-
-
-@media (hover: none) {
-   /* отключить все Ховеры*/
+  
+@media (pointer: fine) and (hover: hover) { 
+  .nav-item:hover{
+  background: rgba(255, 70, 70, 0.10);
   }
+ }

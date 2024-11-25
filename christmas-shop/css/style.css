@@ -55,13 +55,6 @@
   color: black;
 } */
 
-@media (pointer: fine) and (hover: hover) { 
-  .button:hover {
-    background-color: #FFF;
-    color: black;
-  }
- }
-
 .btn-text{
   /* text-align: center; */
 
@@ -328,16 +321,6 @@ text-transform: uppercase;
 	transition: stroke 0.3s ease;
 } */
 
-@media (pointer: fine) and (hover: hover) { 
-  .slider-button-activ:hover{
-    background-color: #fff;
-  }
-  .slider-button-activ:hover svg path{
-    stroke: #ff4646;
-    transition: stroke 0.3s ease;
-  }
- }
-
 /* .slider-button-inactive{
 	opacity: 0.4;
 } */
@@ -395,11 +378,6 @@ text-transform: uppercase;
   gap: var(--Space-0, 0px);
   border-radius: 20px;
   background: var(--Content-Background, #ECF3F8);
-}
-
-.best-card:hover{
-  cursor: grab;
-  color: red;
 }
 
 .best-img{
@@ -537,3 +515,27 @@ text-transform: uppercase;
 	white-space: nowrap; /* Для предотвращения переноса текста 
 	border: 0;
 } */
+
+@media (pointer: fine) and (hover: hover) { 
+  .slider-button-activ:hover{
+    cursor: pointer;
+    background-color: #fff;
+  }
+  .slider-button-activ:hover svg path{
+    stroke: #ff4646;
+    transition: stroke 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #FFF;
+    color: black;
+    cursor: pointer;
+  }
+
+  .best-card:hover{
+    cursor: pointer;
+    color: red;
+  }
+}
+
+ 
