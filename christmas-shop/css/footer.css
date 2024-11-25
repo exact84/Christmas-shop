@@ -1,0 +1,144 @@
+footer{
+  display: flex;
+  /* padding: var(--Space-60, 60px) var(--Space-8, 8px); */
+  padding: 60px 0px;
+	justify-content: center; 
+  gap: var(--Space-0, 0px);
+  background: #FFF;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.footer-div{
+  display: flex;
+  max-width: 1276px;
+  padding: var(--Space-0, 0px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--Space-60, 60px);
+	width: 100%; /* помогло */
+  /* flex-shrink: 0; */
+  /* margin: 0; */
+}
+
+.footer-div-top{
+  display: flex;
+  padding: var(--Space-0, 0px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-12, 12px);
+  /* align-self: stretch; */
+  border-radius: 60px;
+  width: 100%;
+  /* flex-shrink: 0; */
+}
+
+@media screen and (max-width: 1060px){
+  .footer-div-top{
+    display: flex;
+    flex-direction: column;
+    padding: var(--Space-0, 0px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--Space-12, 12px);
+    /* align-self: stretch; */
+    border-radius: 60px;
+    /* width: 94%; */
+  }
+}
+
+/* .footer-div-top a{
+  color: red;
+} */
+
+.footer-div1{
+	text-decoration: none;
+  display: flex;
+  padding: var(--Space-20, 20px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-12, 12px);
+	width: 100%; /* не помогает */
+  border-radius: 20px;
+  background: var(--Content-Background, #ECF3F8);
+}
+
+.footer-action{
+  /* color: var(--Dark, #181C29); */
+  text-align: center;
+	white-space: nowrap;
+
+  /* Action Large */
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 152%; /* 36.48px */
+  letter-spacing: 3.84px;
+  text-transform: uppercase;
+}
+
+.footer-div1:hover{
+  /* cursor: grab; */
+  color: red;
+}
+
+.footer-div-bottom{
+  display: flex;
+  padding: var(--Space-0, 0px);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-12, 12px);
+  align-self: stretch;
+}
+
+.footer-div-socials{
+  display: flex;
+  padding: var(--Space-0, 0px);
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--Space-12, 12px);
+}
+
+.footer-div-socials-div{
+  display: flex;
+  padding: var(--Space-8, 8px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-0, 0px);
+}
+
+.footer-p{
+  color: var(--Dark, #181C29);
+  text-align: center;
+
+  /* Paragraph */
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 148%; /* 23.68px */
+}
+
+.footer-caption{
+  color: var(--Dark, #181C29);
+  text-align: center;
+
+  /* Caption */
+  font-family: Allura;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 24px */
+  letter-spacing: 1.2px;
+}
+
+.footer-caption:hover{
+  color: red;
+}
+
+.icon:hover {
+  fill: red; /* Изменяет цвет заливки */
+}
