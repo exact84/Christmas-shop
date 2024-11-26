@@ -96,19 +96,21 @@ footer{
 
 .footer-div-socials{
   display: flex;
-  padding: var(--Space-0, 0px);
+  padding-top: 9px;
+  /* padding-left: 3px; */
+  padding-bottom: 3px;
   justify-content: center;
-  align-items: flex-start;
-  gap: var(--Space-12, 12px);
+  align-items: center;
+  gap: 28px;
 }
 
-.footer-div-socials-div{
+/* .footer-div-socials-div{
   display: flex;
   padding: var(--Space-8, 8px);
   justify-content: center;
   align-items: center;
   gap: var(--Space-0, 0px);
-}
+} */
 
 .footer-p{
   color: var(--Dark, #181C29);
@@ -144,10 +146,10 @@ footer{
     color: red;
   }
 
-  .footer-div-socials>div:hover{
+  .footer-div-socials>a:hover{
     cursor: pointer;
   }
-  .footer-div-socials>div:hover path{
+  .footer-div-socials>a:hover path{
       stroke: red;
   }
 }
