@@ -504,7 +504,7 @@ text-transform: uppercase;
 	height: 100%;
 }
 
-/* .visually-hidden {
+.visually-hidden {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -512,9 +512,9 @@ text-transform: uppercase;
 	margin: -1px;
 	overflow: hidden;
 	clip: rect(0, 0, 0, 0);
-	white-space: nowrap; /* Для предотвращения переноса текста 
+	white-space: nowrap; 
 	border: 0;
-} */
+}
 
 @media (pointer: fine) and (hover: hover) { 
   .slider-button-activ:hover{

@@ -144,12 +144,19 @@ footer{
     color: red;
   }
 
-  .footer-div-socials-div:hover{
+  /* .footer-div-socials-div:hover{
     stroke: red;
     cursor: pointer;
   }
 
   .icon:hover {
-    fill: red; /* Изменяет цвет заливки */
+    fill: red; 
+  } */
+
+  .footer-div-socials>div:hover{
+    cursor: pointer;
+  }
+  .footer-div-socials>div:hover path{
+      stroke: red;
   }
 }
