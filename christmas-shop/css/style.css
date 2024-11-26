@@ -505,6 +505,7 @@ text-transform: uppercase;
 }
 
 .visually-hidden {
+  /* Для скрытых элементов(заголовков) */
 	position: absolute;
 	width: 1px;
 	height: 1px;

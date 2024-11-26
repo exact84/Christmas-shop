@@ -144,15 +144,6 @@ footer{
     color: red;
   }
 
-  /* .footer-div-socials-div:hover{
-    stroke: red;
-    cursor: pointer;
-  }
-
-  .icon:hover {
-    fill: red; 
-  } */
-
   .footer-div-socials>div:hover{
     cursor: pointer;
   }
