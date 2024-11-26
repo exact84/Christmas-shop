@@ -1,185 +1,138 @@
-@font-face {
-  font-family: 'Allura';
-  src: url('../fonts/Allura-Regular.ttf') format('truetype');
+@import url("../css/header.css");
+@import url("../css/footer.css");
+@import url("../css/general.css");
+
+
+.nav-bar li:first-child .nav-item{
+  background: rgba(255, 70, 70, 0.10);
+  pointer-events: none;
 }
 
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+.gifts{
+  background: url('../img/bg-garland.png') top no-repeat, #FF4646;
+  background-size: contain;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1440;
 }
 
-html {
-	box-sizing: border-box;
-	scroll-behavior: smooth;
-}
-
-body {
-  max-width: 1440px;
-	display: flex;
+.gifts-div{
+  display: flex;
+	max-width: 1276px;
+	padding: var(--Space-0, 0px);
 	flex-direction: column;
-	justify-content: center;
+  justify-content: center;
 	align-items: center;
-
-  margin: auto;
-  padding: 0;
-}
-.wrapper{
-	max-width: 1440px;
-	margin: 0 auto;
-}
-
-main{
-	max-width: 1440px;
-}
-
-header{
-	display: flex;
-	padding: var(--Space-0, 0px) var(--Space-8, 8px);
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: var(--Space-0, 0px);
+  align-content: center;
+	gap: var(--Space-20, 20px);
+  margin: 60px 8px;
 	/* align-self: stretch; */
 }
 
-section {
-	display: flex;
-	align-items: center;
-	justify-content: center; /* Центрируем по горизонтали */
-	/* text-align: center; */
+.gifts-header{
+  padding: 0px 20px;
+  align-self: center;
+  margin: 0;
+  /* margin-left: 40px; */
+  text-align: center;
+  width: 426px;
+  color: #FFF;
 }
 
-.nav {
-  font-family: Montserrat;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 130%; /* 15.6px */
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-
+.gifts-tabs{
   display: flex;
-  max-width: 1276px;
-  padding: 12px  0px;
-  justify-content: space-between;
-  align-items: center;
-	width: 100%;
-  gap: 12px;
-  /* align-self: stretch; */
-}
-
-.nav-bar{
-  display: flex;
-  padding: 0px;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0px;
-  flex: 1 0 0;
-  align-self: stretch;
-}
-
-.nav-left-item{
-  display: flex;
-  padding: 8px 20px;
+  flex-direction: row;
   align-items: center;
   gap: 8px;
 }
 
-.nav-item{
-  display: flex;
-  padding: 12px 24px; /* коррект */
-  justify-content: center;
-  align-items: center;
-  gap: 0px;
-}
-
-a {
-  text-decoration: none; /* Убирает подчёркивание */
-  color: inherit;
-}
-
-.main {
-	/* align-items: center; */
-  margin: 0 ;
-}
-
-.header1{
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-   align-items: center;
-  text-align: center;
-  gap: 12px;
-  margin: auto;
+.gifts-tab{
+  padding: 12px 20px;
   color: #FFF;
-  align-self: stretch;
-  padding: 0px 0px;
-  margin: 0 0;
-}
+  text-align: center;
+	white-space: nowrap;
+  border-radius: 12px;
 
-h1{
-  font-family: Montserrat;
-  font-size: 32px;
+  /* Action Large */
+  font-family: Montserrat-SemiBold;
+  font-size: 12px;
   font-style: normal;
   font-weight: 600;
-  line-height: 150%; /* 48px */
-  letter-spacing: 5.76px;
+  line-height: 130%;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
-  padding: 0px 0px;
-  margin: 0;
+}
+
+/* .gifts-tab:hover{
+  background: rgba(255, 255, 255, 0.2);
+} */
+
+ /* @media (hover: none) and (pointer: coarse) {
+  .button {
+    background-color: initial;
+  }
+} */
+
+.gifts-tab:first-child{
+  background: rgba(255, 255, 255, 0.2); /* не рабоатет */
+  pointer-events: none; /* работает */
+}
+
+.gifts-cards{
+  display: flex;
+	padding: var(--Space-0, 0px);
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+	gap: var(--Space-12, 12px);
+	align-self: stretch;
+	flex-wrap: wrap;
+}
+
+.gifts-card{
+  display: flex;
+  width: 310px;
+  height: 342px;
+  padding: var(--Space-0, 0px);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-0, 0px);
+  border-radius: 20px;
+  background: var(--Content-Background, #ECF3F8);
+}
+
+/* .gifts-card:hover{
+  cursor: grab;
+  color: red;
+} */
+
+.gifts-img{
+	display: flex;
+	width: 310px;
+	height: 230px;
+	padding: var(--Space-0, 0px);
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: var(--Space-0, 0px);
+	flex-shrink: 0;
+}
+
+.gifts-card-footer{
+  display: flex;
+  padding: var(--Space-20, 20px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-8, 8px);
+  flex: 1 0 0;
+  align-self: stretch;
+
+  border-radius: 20px;
+  background: var(--Static-White, #FFF);
 }
 
 h2{
 	margin: 0;
-}
-
-.button {
-  display: flex;
-  padding: 20px 32px;
-  align-items: center;
-  gap: 0px;
-  border-radius: 20px;
-  background: #181C29;
-  color: #FFF;
-  margin: 12px 0;
-  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-}
-
-.button:hover {
-  background-color: #FFF;
-  color: black;
-}
-
-.caption{
-  /* align-self: stretch; */
-  color: var(--Static-White, #FFF);
-  text-align: center;
-
-  /* Caption */
-  font-family: Allura;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 24px */
-  letter-spacing: 1.2px;
-	/* padding-bottom: 12px; correct */
-	margin-top: 100px 0;
-}
-
-.header2{
-  /* align-self: stretch; */
-  color: var(--Static-White, #FFF);
-  text-align: center;
-	margin: 0;
-
-  /* Header 2 */
-  font-family: Montserrat;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 152%; /* 36.48px */
-  letter-spacing: 3.84px;
-  text-transform: uppercase;
 }
 
 .header4{
@@ -196,152 +149,28 @@ h2{
 	margin: 0;
 }
 
-h3{
-  /* Header 3 */
-  font-family: Montserrat;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 152%; /* 24.32px */
-  letter-spacing: 1.28px;
-  text-transform: uppercase;
-	margin: 0;
+@media screen and (max-width: 380px){
+  .gifts-header{
+    padding: 0px 30px 0px;
+  }
+  .gifts-tab{
+    padding: 8px;
+  }
+  .gifts-tabs{
+    padding: 0;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    gap: 0px;
+  }
 }
 
-footer{
-  display: flex;
-  padding: var(--Space-60, 60px) var(--Space-8, 8px);
-  flex-direction: column;
-  align-items: center;
-	justify-content: center;
-  gap: var(--Space-0, 0px);
-  /* align-self: stretch; */
-  background: #FFF;
-}
+@media (pointer: fine) and (hover: hover) { 
 
-.footer-div{
-  display: flex;
-  max-width: 1276px;
-  padding: var(--Space-0, 0px);
-  flex-direction: column;
-  align-items: center;
-  gap: var(--Space-60, 60px);
-  /* align-self: stretch; */
-  width: 100%; /* помогло */
-}
-
-.footer-div-top{
-  display: flex;
-  padding: var(--Space-0, 0px);
-  justify-content: center;
-  align-items: center;
-  gap: var(--Space-12, 12px);
-  align-self: stretch;
-  border-radius: 60px;
-}
-
-.footer-div1{
-  display: flex;
-  padding: var(--Space-20, 20px);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: var(--Space-12, 12px);
-  flex: 1 0 0;
-
-  border-radius: 20px;
-  background: var(--Content-Background, #ECF3F8);
-}
-
-/* .footer-img{
-	display: flex;
-padding: var(--Space-20, 20px);
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: var(--Space-12, 12px);
-flex: 1 0 0;
-border-radius: 20px;
-background: var(--Content-Background, #ECF3F8);
-} */
-
-.footer-action{
-  color: var(--Dark, #181C29);
-  text-align: center;
-	white-space: nowrap;
-
-  /* Action Large */
-  font-family: Montserrat;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 152%; /* 36.48px */
-  letter-spacing: 3.84px;
-  text-transform: uppercase;
-}
-
-.footer-div-bottom{
-  display: flex;
-  padding: var(--Space-0, 0px);
-  flex-direction: column;
-  align-items: center;
-  gap: var(--Space-12, 12px);
-  align-self: stretch;
-}
-
-.footer-div-socials{
-  display: flex;
-  padding: var(--Space-0, 0px);
-  justify-content: center;
-  align-items: flex-start;
-  gap: var(--Space-12, 12px);
-}
-
-.footer-div-socials-div{
-  display: flex;
-  padding: var(--Space-8, 8px);
-  justify-content: center;
-  align-items: center;
-  gap: var(--Space-0, 0px);
-}
-
-.footer-p{
-  color: var(--Dark, #181C29);
-  text-align: center;
-
-  /* Paragraph */
-  font-family: Montserrat;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 148%; /* 23.68px */
-}
-
-.footer-caption{
-  color: var(--Dark, #181C29);
-  text-align: center;
-
-  /* Caption */
-  font-family: Allura;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 24px */
-  letter-spacing: 1.2px;
-}
-
-.visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap; /* Для предотвращения переноса текста */
-	border: 0;
-}
-
-.no-pointer {
-  cursor: default; /* Указатель мыши остаётся обычным */
+  .gift-card:hover{
+    cursor: grab;
+    color: red;
+  }
+  .gifts-tab:hover{
+    background: rgba(255, 255, 255, 0.2);
+    }
 }
