@@ -1,7 +1,7 @@
 footer{
   display: flex;
-  /* padding: var(--Space-60, 60px) var(--Space-8, 8px); */
-  padding: 60px 0px;
+  padding: var(--Space-60, 60px) var(--Space-8, 8px);
+  /* padding: 60px 0px; */
 	justify-content: center; 
   gap: var(--Space-0, 0px);
   background: #FFF;
