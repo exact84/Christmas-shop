@@ -10,23 +10,24 @@
 
 <body>
   <header>
-    <!-- <nav class="nav" >
-      <a href="../index.html" class="nav-left-item">
-        <img src="../img/snowflake.svg" alt="Logo Icon" class="logo-icon">
-        <span>The Gifts</span>
-      </a>
-      <span class ="nav-bar">
-        <a class="nav-item no-pointer" href="../gifts/gifts.html">Gifts</a>
-        <span class="nav-item"><a href="../index.html#about">About</a></span>
-        <span class="nav-item"><a href="../index.html#best-gifts">Best</a></span>
-        <span class="nav-item"><a href="#contacts">Contacts</a></span>
-      </span>
-    </nav> -->
     <nav class="nav" >
       <a href="../index.html" class="nav-left-item">
         <img src="../img/snowflake.svg" alt="Logo Icon" class="logo-icon">
         <span>The Gifts</span>
       </a>
+
+      <input type="checkbox" id="burger-toggle" class="burger-toggle">
+      <label for="burger-toggle" class="burger-menu">
+        <span></span>
+        <span></span>
+        <ul class="menu nobullet">
+          <li><a href="" class="menu-item no-pointer">Gifts</a></li>
+          <li><a href="../index.html#about" class="menu-item">About</a></li>
+          <li><a href="../index.html#best-gifts" class="menu-item">Best</a></li>
+          <li><a href="#contacts" class="menu-item">Contacts</a></li>
+        </ul>
+      </label>
+
       <ul class="nav-bar nobullet">
         <li>
           <a class="nav-item no-pointer" href="">Gifts</a>
@@ -41,13 +42,9 @@
           <a class="nav-item" href="#contacts">Contacts</a>
         </li>
       </ul>
-      <input type="checkbox" id="burger-toggle" class="burger-toggle">
-      <label for="burger-toggle" class="burger-menu">
-        <span></span>
-        <span></span>
-      </label>
     </nav>
   </header>
+
   <main class="main">
     <section class="gifts">
       <div class="gifts-div">
@@ -216,6 +213,20 @@
     </div>
   </div>
 </footer>
+
+<!-- Кнопка вверх -->
+<button id="btn-top" class="btn-top">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="arrow-up ">
+    <path id="Vector_top" d="M12 5V19" stroke="#FF4646" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_2_top" d="M18 11L12 5" stroke="#FF4646" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_3_top" d="M6 11L12 5" stroke="#FF4646" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </svg>
+</button>
+
+<script src="../js/btn-top.js"></script>
+<script src="../js/menu.js"></script>
 
 </body>
 </html>

@@ -31,31 +31,8 @@ body {
   width: 100%;
   margin: 0 auto;
   /* padding: 0; */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 } 
-/* body {
-  width: 1440px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-  margin: auto;
-  padding: 0;
-} */
-
-/* .wrapper{
-  background-color: blueviolet;
-  width: 100%;
-	max-width: 1440px;
-	margin: 0 auto;
-} */
-
-/* main{
-  width: 100%;
-  max-width: 1440;
-  margin: 0 ;
-} */
 
 section {
 	display: flex;

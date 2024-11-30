@@ -7,9 +7,59 @@
     <link rel="stylesheet" href="./css/style2.css">
 </head>
 <body>
-  <div class="wrapper">
     <header>
+      <nav class="nav" >
+        <div class="div">
+          <input type="checkbox" id="toggle" class="toggle">
+          <label for="toggle" class="lbl-btn">
+            <span>1</span>
+            <span>2</span>
+            <ul class="list">
+              <li>123</li>
+              <li>456</li>
+            </ul> 
+        </div>         
+        <a href="index.html" class="nav-left-item">
+          <img src="img/snowflake.svg" alt="Logo Icon" class="logo-icon">
+          <span>The Gifts</span>
+        </a>
+  
+        <input type="checkbox" id="burger-toggle" class="burger-toggle">
+        <label for="burger-toggle" class="burger-menu">
+          <span></span>
+          <span></span>
+          <ul class="menu nobullet">
+            <li><a href="./gifts/gifts.html">Gifts</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#best-gifts">Best</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </label>
 
+        <ul class="nav-bar nobullet">
+          <li>
+            <a class="nav-item" href="./gifts/gifts.html">Gifts</a>
+          </li>
+          <li>
+            <a class="nav-item" href="#about">About</a>
+          </li>
+          <li>
+            <a class="nav-item" href="#best-gifts">Best</a>
+          </li>
+          <li>
+            <a class="nav-item" href="#contacts">Contacts</a>
+          </li>
+        </ul>
+
+        <!-- <div class="menu">
+          <ul>
+            <li><a href="./gifts/gifts.html">Gifts</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#best-gifts">Best</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div> -->
+      </nav>
     </header>
 
     <main class="main">
@@ -33,14 +83,18 @@
         <section class="body2" 
             style="background-color: yellow;">
             <div>Контент секции2</div>
+            <div class="g-wrapper">
+              <div class="g-item">One</div>
+              <div class="g-item">Two</div>
+              <div class="g-item1">Three</div>
+              <div class="g-item">Four</div>
+              <div class="g-item">Five</div>
+            </div>
         </section>
-    
 
     </main>
 
   <footer>
-
   </footer>
-  </div>
 </body>
 </html>
