@@ -7,7 +7,6 @@
   <link rel="icon" type="image/png" sizes="24x24" href="../img/snowflake.svg">
   <link rel="stylesheet" href="./gifts.css">
   <link rel="stylesheet" href="./modal.css">
-  <!-- <script src="../js/cards.js"></script> -->
 </head>
 
 <body>
@@ -52,10 +51,10 @@
       <div class="gifts-div">
       <h1 class="gifts-header">Achieve health, harmony, and inner strength</h1>
         <div class="gifts-tabs" id="gifts-tabs">
-          <div class="gifts-tab">All</div>
-          <div class="gifts-tab"><a href="">For work</a> </div>
-          <div class="gifts-tab"><a href="">For health</a> </div>
-          <div class="gifts-tab"><a href="">For harmony</a> </div>
+          <div><a class="gifts-tab" id="All">All</a></div>
+          <div><a class="gifts-tab" id="For Work">For Work</a></div>
+          <div><a class="gifts-tab" id="For Health">For Health</a> </div>
+          <div><a class="gifts-tab" id="For Harmony">For Harmony</a> </div>
         </div>
         <div class="gifts-cards" id="gifts-cards">
           <div class="gifts-card">
@@ -230,7 +229,7 @@
 <!-- Модальное окно -->
 <div class="modal-window" id ="modal">
   <div class="modal-div">
-    <div class="gifts-img"></div>
+    <div class="gifts-img" id="cur-img"></div>
     <!-- <img height="230" class="gifts-img" src="../img/gift-for-work.png" alt="gift-for-work"> -->
     <div class="modal-description">
       <div class="modal-top">
@@ -240,7 +239,7 @@
         <h3 class="h3" id="name">
           Console.log Guru
         </h3>
-        <p class="text"  id="description">Uses console.log like a crystal ball to find any issue.</p>
+        <p class="text" id="description">Uses console.log like a crystal ball to find any issue.</p>
       </div>
 
 
@@ -252,32 +251,32 @@
 
           <div class="power">
             <p>Live</p>
-            <p>+</p>
-            <div class="snowflakes">
+            <p class="s500" id="power1">+</p>
+            <div class="snowflakes" id="snowflakes1">
               <img src="../img/snowflake-small.svg">
             </div>
           </div>
 
           <div class="power">
-            <p>Live</p>
-            <p>+</p>
-            <div class="snowflakes">
+            <p>Create</p>
+            <p class="s500" id="power2">+</p>
+            <div class="snowflakes" id="snowflakes2">
               <img src="../img/snowflake-small.svg">
             </div>
           </div>
 
           <div class="power">
-            <p>Live</p>
-            <p>+</p>
-            <div class="snowflakes">
+            <p>Love</p>
+            <p class="s500" id="power3">+</p>
+            <div class="snowflakes" id="snowflakes3">
               <img src="../img/snowflake-small.svg">
             </div>
           </div>
 
           <div class="power">
-            <p>Live</p>
-            <p>+</p>
-            <div class="snowflakes">
+            <p>Dream</p>
+            <p class="s500" id="power4">+</p>
+            <div class="snowflakes" id="snowflakes4">
               <img src="../img/snowflake-small.svg">
             </div>
           </div>

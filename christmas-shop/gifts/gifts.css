@@ -62,10 +62,11 @@
   text-transform: uppercase;
 }
 
-.gifts-tab:first-child{
-  background: rgba(255, 255, 255, 0.2); /* не рабоатет */
-  pointer-events: none; /* работает */
-}
+/* Для второй части */
+/* .gifts-tab:first-child{
+  background: rgba(255, 255, 255, 0.2); 
+  pointer-events: none; 
+} */
 
 .gifts-cards{
   display: flex;
@@ -191,11 +192,12 @@ h2{
 
 @media (pointer: fine) and (hover: hover) { 
 
-  .gift-card:hover{
-    cursor: grab;
+  .gifts-card:hover{
+    cursor: pointer;
     color: red;
   }
   .gifts-tab:hover{
     background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
     }
 }

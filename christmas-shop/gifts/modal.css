@@ -85,6 +85,8 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 148%; /* 23.68px */
+
+  align-self: stretch;
 }
 .modal-bottom {
   display: flex;
@@ -98,19 +100,33 @@ p {
   display: flex;
   padding: var(--Space-0, 0px);
   flex-direction: column;
-  align-items: flex-start;
   gap: var(--Space-0, 0px);
-  align-self: stretch;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+
 }
 .power {
-  display: flex;
   color: #181C29;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  column-gap: 8px;
+  /* padding-top: 2px; */
 }
+
+.s500{
+  padding-top: 0px;
+  padding-right: 5px;
+}
+
 .snowflakes {
-  /* display: flex; */
+  display: flex;
   padding: var(--Space-0, 0px);
-  /* align-items: flex-start; */
   gap: var(--Space-8, 8px);
+  /* justify-self: auto; */
+
 }
 #close-btn {
   position: absolute;
