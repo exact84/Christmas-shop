@@ -26,7 +26,6 @@
   align-content: center;
 	gap: var(--Space-20, 20px);
   margin: 60px 8px;
-	/* align-self: stretch; */
 }
 
 .gifts-header{

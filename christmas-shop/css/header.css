@@ -68,12 +68,11 @@ a {
   display: none;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
 
 @media screen and (max-width: 768px){
-
-  body.no-scroll {
-    overflow: hidden; /* для отключения скролла скриптом */
-  }
 
   /* .burger-toggle {
     position: absolute;
@@ -95,7 +94,7 @@ a {
     height: 960px;
     background-color: #fff;
     transform: translateX(100%); /* Убираем за пределы экрана */
-    transition: transform 0.3s ease; /* ease-in-out */
+    transition: transform 0.3s ease;
     z-index: 999;
     /* opacity: 0; */
     pointer-events: none;

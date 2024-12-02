@@ -12,7 +12,7 @@ burgerToggle.addEventListener("change", function () {
 
 document.querySelectorAll(".menu-item").forEach((item) => {
   item.addEventListener("click", () => {
-    document.getElementById("burger-toggle").checked = false; // Снимаем отметку с чекбокса
+    document.getElementById("burger-toggle").checked = false;
     body.classList.remove("no-scroll");
   });
 });

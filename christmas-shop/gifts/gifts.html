@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="24x24" href="../img/snowflake.svg">
   <link rel="stylesheet" href="./gifts.css">
   <link rel="stylesheet" href="./modal.css">
+  <!-- <script src="../js/cards.js"></script> -->
 </head>
 
 <body>
@@ -50,13 +51,13 @@
     <section class="gifts">
       <div class="gifts-div">
       <h1 class="gifts-header">Achieve health, harmony, and inner strength</h1>
-        <div class="gifts-tabs">
+        <div class="gifts-tabs" id="gifts-tabs">
           <div class="gifts-tab">All</div>
           <div class="gifts-tab"><a href="">For work</a> </div>
           <div class="gifts-tab"><a href="">For health</a> </div>
           <div class="gifts-tab"><a href="">For harmony</a> </div>
         </div>
-        <div class="gifts-cards">
+        <div class="gifts-cards" id="gifts-cards">
           <div class="gifts-card">
             <img class="gifts-img" src="../img/gift-for-work.png" alt="gift-for-work">
             <div class="gifts-card-footer">
@@ -233,13 +234,13 @@
     <!-- <img height="230" class="gifts-img" src="../img/gift-for-work.png" alt="gift-for-work"> -->
     <div class="modal-description">
       <div class="modal-top">
-        <h4 class="header4">
+        <h4 class="header4" id="category">
           category
         </h4>
-        <h3 class="h3">
+        <h3 class="h3" id="name">
           Console.log Guru
         </h3>
-        <p class="text">Uses console.log like a crystal ball to find any issue.</p>
+        <p class="text"  id="description">Uses console.log like a crystal ball to find any issue.</p>
       </div>
 
 
@@ -292,43 +293,11 @@
   </svg>
 </div>
 
+<div class="overlay" id="overlay"></div>
+
+<script src="../js/cards.js"></script>
 <script src="../js/btn-top.js"></script>
 <script src="../js/menu.js"></script>
-
-<script>
-  const containers = document.getElementsByClassName('gifts-card');
-  const modalWindow = document.getElementById('modal');
-  const closeBtn = document.getElementById('close-btn');
-  let flag = true;
-
-  for (let container of containers) {
-    container.addEventListener('click', function() {
-      // alert('нажато!'); 
-      if (flag) {
-        flag = false;
-        modalWindow.classList.add('show'); 
-        event.stopPropagation();
-      }
-    });
-  }
-
-  closeBtn.addEventListener('click', function() {
-    // alert('отжато!'); 
-    flag = true;
-    modalWindow.classList.remove('show'); 
-    event.stopPropagation(); 
-    // Останавливаем всплытие события, чтобы клик по кнопке не срабатывал на документ
-  });
-
-  document.addEventListener('click', function(event) {
-    // Проверяем, был ли клик вне модального окна и кнопки закрытия
-    if (!modalWindow.contains(event.target) && event.target !== closeBtn && !flag) {
-      flag = true;
-      modalWindow.classList.remove('show');
-    }
-  });
-
-</script>
 
 </body>
 </html>
