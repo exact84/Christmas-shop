@@ -6,6 +6,7 @@
   <title>Gifts</title>
   <link rel="icon" type="image/png" sizes="24x24" href="../img/snowflake.svg">
   <link rel="stylesheet" href="./gifts.css">
+  <link rel="stylesheet" href="./modal.css">
 </head>
 
 <body>
@@ -225,8 +226,109 @@
   </svg>
 </button>
 
+<!-- Модальное окно -->
+<div class="modal-window" id ="modal">
+  <div class="modal-div">
+    <div class="gifts-img"></div>
+    <!-- <img height="230" class="gifts-img" src="../img/gift-for-work.png" alt="gift-for-work"> -->
+    <div class="modal-description">
+      <div class="modal-top">
+        <h4 class="header4">
+          category
+        </h4>
+        <h3 class="h3">
+          Console.log Guru
+        </h3>
+        <p class="text">Uses console.log like a crystal ball to find any issue.</p>
+      </div>
+
+
+      <div class="modal-bottom">
+        <h4 class="header4">
+          Adds superpowers to:
+        </h4>
+        <div class="rating">
+
+          <div class="power">
+            <p>Live</p>
+            <p>+</p>
+            <div class="snowflakes">
+              <img src="../img/snowflake-small.svg">
+            </div>
+          </div>
+
+          <div class="power">
+            <p>Live</p>
+            <p>+</p>
+            <div class="snowflakes">
+              <img src="../img/snowflake-small.svg">
+            </div>
+          </div>
+
+          <div class="power">
+            <p>Live</p>
+            <p>+</p>
+            <div class="snowflakes">
+              <img src="../img/snowflake-small.svg">
+            </div>
+          </div>
+
+          <div class="power">
+            <p>Live</p>
+            <p>+</p>
+            <div class="snowflakes">
+              <img src="../img/snowflake-small.svg">
+            </div>
+          </div>
+
+        </div>
+      </div>  
+    </div>
+
+  </div>
+  <svg id="close-btn" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+    <path d="M30 10L10 30" stroke="#181C29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M10 10L30 30" stroke="#181C29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+
 <script src="../js/btn-top.js"></script>
 <script src="../js/menu.js"></script>
+
+<script>
+  const containers = document.getElementsByClassName('gifts-card');
+  const modalWindow = document.getElementById('modal');
+  const closeBtn = document.getElementById('close-btn');
+  let flag = true;
+
+  for (let container of containers) {
+    container.addEventListener('click', function() {
+      // alert('нажато!'); 
+      if (flag) {
+        flag = false;
+        modalWindow.classList.add('show'); 
+        event.stopPropagation();
+      }
+    });
+  }
+
+  closeBtn.addEventListener('click', function() {
+    // alert('отжато!'); 
+    flag = true;
+    modalWindow.classList.remove('show'); 
+    event.stopPropagation(); 
+    // Останавливаем всплытие события, чтобы клик по кнопке не срабатывал на документ
+  });
+
+  document.addEventListener('click', function(event) {
+    // Проверяем, был ли клик вне модального окна и кнопки закрытия
+    if (!modalWindow.contains(event.target) && event.target !== closeBtn && !flag) {
+      flag = true;
+      modalWindow.classList.remove('show');
+    }
+  });
+
+</script>
 
 </body>
 </html>
