@@ -45,7 +45,7 @@ fetch("./gifts.json")
                 <h3 class="h3-black">${card.name}</h3>
               </div>
             </div>`;
-        if (i == 4) {
+        if (i == 3) {
           break;
         }
       }

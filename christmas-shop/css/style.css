@@ -463,7 +463,7 @@ text-transform: uppercase;
   padding: 10px 12px 12px 12px;
   background: rgba(255, 255, 255, 0.40);
   border-radius: 20px;
-  /* align-items: center; */
+  align-items: center;
   justify-items: center; /* работает */
   gap: 0px;
   width: 340px;
@@ -527,7 +527,7 @@ text-transform: uppercase;
 	align-items: center;
 	gap: var(--Space-0, 0px);
 	flex-shrink: 0;
-  
+
   background: url("../img/gift-for-work.png") center  no-repeat;
   background-size: cover;
   width: 100%;
