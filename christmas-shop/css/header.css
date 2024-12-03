@@ -150,4 +150,8 @@ body.no-scroll {
   .nav-item:hover{
   background: rgba(255, 70, 70, 0.10);
   }
+
+  /* .menu-item:hover{
+    background: rgba(255, 70, 70, 0.10);
+    } */
  }

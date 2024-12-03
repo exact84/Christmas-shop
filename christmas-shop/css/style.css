@@ -251,6 +251,7 @@
   align-items: flex-start;
   gap: var(--Space-0, 0px);
   align-self: flex-start;
+  width: 100%;
 }
 
 .slider-slider{
@@ -260,6 +261,7 @@
   justify-content: flex-start;
   gap: var(--Space-20, 20px);
   width: max-content;
+  transition: transform 0.5s ease; 
 }
 
 .slider-img{
