@@ -6,6 +6,7 @@
   <title>Home</title>
   <link rel="icon" type="image/png" sizes="24x24" href="./img/snowflake.svg">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./gifts/modal.css">
 </head>
 <body>
 <!-- <div class="wrapper"> -->
@@ -124,7 +125,7 @@
         </div>
         <div class="best-cards" id="best-cards">
           <div class="best-card">
-            <img class="best-img" src="./img/gift-for-work.png" alt="gift-for-work">
+            <img class="gifts-img2" src="./img/gift-for-work.png" alt="gift-for-work">
             <div class="best-card-footer">
               <h4 class="header4" style="color: #4361FF;">for work</h4>
               <h3 class="h3-black">console.log guru</h3>
@@ -132,7 +133,7 @@
           </div>
 
           <div class="best-card">
-            <img class="best-img" src="./img/gift-for-health.png" alt="gift-for-health">
+            <img class="gifts-img2" src="./img/gift-for-health.png" alt="gift-for-health">
             <div class="best-card-footer">
               <h4 class="header4" style="color: #06A44F;">for health</h4>
               <h3 class="h3-black">Hydration Bot</h3>
@@ -140,7 +141,7 @@
           </div>
 
           <div class="best-card">
-            <img class="best-img" src="./img/gift-for-work.png" alt="gift-for-work">
+            <img class="gifts-img2" src="./img/gift-for-work.png" alt="gift-for-work">
             <div class="best-card-footer">
               <h4 class="header4" style="color: #4361FF;">for work</h4>
               <h3 class="h3-black">merge master</h3>
@@ -148,7 +149,7 @@
           </div>
 
           <div class="best-card">
-            <img class="best-img" src="./img/gift-for-harmony.png" alt="gift-for-harmony">
+            <img class="gifts-img2" src="./img/gift-for-harmony.png" alt="gift-for-harmony">
             <div class="best-card-footer">
               <h4 class="header4" style="color: #FF43F7;">for harmony</h4>
               <h3 class="h3-black">Spontaneous Coding Philosopher</h3>
@@ -260,9 +261,76 @@
   </footer>
 <!-- </div>   -->
 
+<!-- Модальное окно -->
+<div class="modal-window" id ="modal">
+  <div class="modal-div">
+    <div class="gifts-img2" id="cur-img"></div>
+    <div class="modal-description">
+      <div class="modal-top">
+        <h4 class="header4" id="category">
+          category
+        </h4>
+        <h3 class="h3" id="name">
+          Console.log Guru
+        </h3>
+        <p class="text" id="description">Uses console.log like a crystal ball to find any issue.</p>
+      </div>
+
+
+      <div class="modal-bottom">
+        <h4 class="header4">
+          Adds superpowers to:
+        </h4>
+        <div class="rating">
+
+          <div class="power">
+            <p>Live</p>
+            <p class="s500" id="power1">+</p>
+            <div class="snowflakes" id="snowflakes1">
+              <img src="./img/snowflake-small.svg">
+            </div>
+          </div>
+
+          <div class="power">
+            <p>Create</p>
+            <p class="s500" id="power2">+</p>
+            <div class="snowflakes" id="snowflakes2">
+              <img src="./img/snowflake-small.svg">
+            </div>
+          </div>
+
+          <div class="power">
+            <p>Love</p>
+            <p class="s500" id="power3">+</p>
+            <div class="snowflakes" id="snowflakes3">
+              <img src="./img/snowflake-small.svg">
+            </div>
+          </div>
+
+          <div class="power">
+            <p>Dream</p>
+            <p class="s500" id="power4">+</p>
+            <div class="snowflakes" id="snowflakes4">
+              <img src="./img/snowflake-small.svg">
+            </div>
+          </div>
+
+        </div>
+      </div>  
+    </div>
+
+  </div>
+  <svg id="close-btn" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+    <path d="M30 10L10 30" stroke="#181C29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M10 10L30 30" stroke="#181C29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<script src="./js/cards-home.js"></script>
 <script src="./js/menu.js"></script>
 <script src="./js/timer.js"></script>
-<script src="./js/best-gifts.js"></script>
 
 </body>
 </html>

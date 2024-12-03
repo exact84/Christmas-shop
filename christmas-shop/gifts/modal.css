@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   /* Убираем за пределы экрана */
-  transform: translate(-50%, -50%) translateX(200%);
+  transform: translate(-50%, -50%) translateX(300%);
   transition: transform 0.3s ease;
   z-index: 999;
 }
@@ -47,7 +47,7 @@
 }
 
 .gifts-img{
-  background: url("../img/gift-for-work.png") center  no-repeat;
+  background: url("../img/gift-for-work.png") center no-repeat;
   background-size: cover;
   width: 100%;
 }

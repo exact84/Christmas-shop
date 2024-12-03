@@ -517,6 +517,22 @@ text-transform: uppercase;
 	border: 0;
 }
 
+.gifts-img2{
+  display: flex;
+	width: 310px;
+	height: 230px;
+	padding: var(--Space-0, 0px);
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: var(--Space-0, 0px);
+	flex-shrink: 0;
+  
+  background: url("../img/gift-for-work.png") center  no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
 @media (pointer: fine) and (hover: hover) { 
   .slider-button-activ:hover{
     cursor: pointer;

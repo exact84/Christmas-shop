@@ -1,4 +1,4 @@
-fetch("../gifts.json" || "/gifts.json")
+fetch("./gifts.json")
   .then((response) => {
     if (!response.ok) {
       throw new Error(`Ошибка: ${response.status}`);
@@ -32,23 +32,24 @@ fetch("../gifts.json" || "/gifts.json")
       let i = -1;
       for (let card of cards) {
         i += 1;
-        if (filter == "All" || filter == card.category) {
-          gifts_cards =
-            gifts_cards +
-            `          <div class="gifts-card" id="${i}">
-              <img class="gifts-img" src="../img/${
+        gifts_cards =
+          gifts_cards +
+          `          <div class="best-card" id="${i}">
+              <img class="best-img" src="./img/${
                 categories[card.category]
               }" alt="Gift ${card.category}">
-              <div class="gifts-card-footer">
+              <div class="best-card-footer">
                 <h4 class="header4" style="color: ${colors[card.category]};">${
-              card.category
-            }</h4>
+            card.category
+          }</h4>
                 <h3 class="h3-black">${card.name}</h3>
               </div>
             </div>`;
+        if (i == 4) {
+          break;
         }
       }
-      const cardsElement = document.getElementById("gifts-cards");
+      const cardsElement = document.getElementById("best-cards");
       cardsElement.innerHTML = gifts_cards;
     }
 
@@ -59,21 +60,22 @@ fetch("../gifts.json" || "/gifts.json")
     let flag = true;
 
     document
-      .getElementById("gifts-cards")
+      .getElementById("best-cards")
       .addEventListener("click", function (event) {
         // alert(`нажато! ${container}`);
-        const container = event.target.closest(".gifts-card");
+        const container = event.target.closest(".best-card");
         if (flag) {
           flag = false;
-
+          // console.log(container);
           const id = container.id;
           const card = cards[id];
 
           // Переносим данные в модальное окно
-          const curImg = document.getElementsByClassName("gifts-img");
-          curImg[curImg.length - 1].style.backgroundImage = `url("../img/${
+          const curImg = document.getElementsByClassName("gifts-img2");
+          curImg[curImg.length - 1].style.backgroundImage = `url("./img/${
             categories[cards[container.id].category]
           }")`;
+
           const category = document.getElementById("category");
           const name = document.getElementById("name");
           const description = document.getElementById("description");
@@ -99,37 +101,37 @@ fetch("../gifts.json" || "/gifts.json")
           snowflakes1.innerHTML = "";
           for (let i = 1; i <= 5; i += 1) {
             if (i <= countFl)
-              snowflakes1.innerHTML += '<img src="../img/snowflake-small.svg">';
+              snowflakes1.innerHTML += '<img src="./img/snowflake-small.svg">';
             else
               snowflakes1.innerHTML +=
-                '<img src="../img/snowflake-small-op.svg">';
+                '<img src="./img/snowflake-small-op.svg">';
           }
           countFl = +cards[container.id].superpowers.create / 100;
           snowflakes2.innerHTML = "";
           for (let i = 1; i <= 5; i += 1) {
             if (i <= countFl)
-              snowflakes2.innerHTML += '<img src="../img/snowflake-small.svg">';
+              snowflakes2.innerHTML += '<img src="./img/snowflake-small.svg">';
             else
               snowflakes2.innerHTML +=
-                '<img src="../img/snowflake-small-op.svg">';
+                '<img src="./img/snowflake-small-op.svg">';
           }
           countFl = +cards[container.id].superpowers.love / 100;
           snowflakes3.innerHTML = "";
           for (let i = 1; i <= 5; i += 1) {
             if (i <= countFl)
-              snowflakes3.innerHTML += '<img src="../img/snowflake-small.svg">';
+              snowflakes3.innerHTML += '<img src="./img/snowflake-small.svg">';
             else
               snowflakes3.innerHTML +=
-                '<img src="../img/snowflake-small-op.svg">';
+                '<img src="./img/snowflake-small-op.svg">';
           }
           countFl = +cards[container.id].superpowers.dream / 100;
           snowflakes4.innerHTML = "";
           for (let i = 1; i <= 5; i += 1) {
             if (i <= countFl)
-              snowflakes4.innerHTML += '<img src="../img/snowflake-small.svg">';
+              snowflakes4.innerHTML += '<img src="./img/snowflake-small.svg">';
             else
               snowflakes4.innerHTML +=
-                '<img src="../img/snowflake-small-op.svg">';
+                '<img src="./img/snowflake-small-op.svg">';
           }
 
           overlay.classList.add("show");
@@ -164,18 +166,6 @@ fetch("../gifts.json" || "/gifts.json")
         body.classList.remove("no-scroll");
       }
     });
-
-    // фильтр подарков
-    const tabs = document.getElementsByClassName("gifts-tab");
-    for (let tab of tabs) {
-      tab.addEventListener("click", function () {
-        for (let tab of tabs) {
-          tab.style.background = "";
-        }
-        tab.style.background = "rgba(255, 255, 255, 0.2)";
-        fillGiftList(tab.id);
-      });
-    }
   })
   .catch((error) => {
     console.error("Ошибка загрузки JSON:", error);
