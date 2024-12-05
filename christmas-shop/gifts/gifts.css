@@ -158,6 +158,10 @@ h2{
   background-color: #0056b3;
 }
 
+.gifts-tab {
+  background: "rgba(255, 255, 255, 0.2)"
+}
+
 @media screen and (max-width: 508px){
   .gifts-header{
     width: 100%;
