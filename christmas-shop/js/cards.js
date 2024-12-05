@@ -24,6 +24,9 @@ fetch("../gifts.json" || "/gifts.json")
       "For Harmony": "#FF43F7",
     };
 
+    document.querySelector(".gifts-tab").style.background =
+      "rgba(255, 255, 255, 0.2)";
+
     fillGiftList("All");
 
     function fillGiftList(filter = "All") {
@@ -167,6 +170,8 @@ fetch("../gifts.json" || "/gifts.json")
 
     // фильтр подарков
     const tabs = document.getElementsByClassName("gifts-tab");
+    // const tabAll = document.querySelector(".gifts-tab");
+    // tabAll.style.background = "";
     for (let tab of tabs) {
       tab.addEventListener("click", function () {
         for (let tab of tabs) {
