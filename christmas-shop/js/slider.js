@@ -56,9 +56,28 @@ function resize() {
   step = (widthSlider - widthVisble) / clicks;
   widthVisble = section.offsetWidth;
   widthSlider = slider.offsetWidth;
+  // console.log(
+  //   `widthVisble: ${widthVisble}, widthSlider: ${widthSlider}, clicks: ${clicks}`
+  // );
   btnLeft.classList.remove("slider-button-activ");
   VectorLeft.setAttribute("stroke-opacity", "0.3");
   btnRight.classList.add("slider-button-activ");
   VectorRight.setAttribute("stroke-opacity", "1");
   slider.style.transform = `translateX(0px)`;
 }
+
+const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+function handleDeviceChange(e) {
+  // if (e.matches) {
+  //   console.log("Включён мобильный режим");
+  // } else {
+  //   console.log("Включён десктопный режим");
+  // }
+  resize();
+  // console.log(
+  //   `widthVisble: ${widthVisble}, widthSlider: ${widthSlider}, clicks: ${clicks}`
+  // );
+}
+
+mediaQuery.addEventListener("change", handleDeviceChange);
