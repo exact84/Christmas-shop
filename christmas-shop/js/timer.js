@@ -12,8 +12,16 @@ function Timer() {
 }
 
 function updateTimer(counterElement) {
-  const targetDate = new Date(Date.UTC(2024, 11, 31, 23, 59, 59)); // 31 декабря 2024 года 23:59:59 UTC
+  const now = new Date();
+  const targetDate = new Date(
+    Date.UTC(now.getUTCFullYear(), 11, 31, 23, 59, 59)
+  ); // 31 декабря текущего года 23:59:59 UTC
 
+  if (now > targetDate) {
+    targetDate = new Date(
+      Date.UTC(now.getUTCFullYear() + 1, 11, 31, 23, 59, 59)
+    );
+  }
   const nowUTC = Date.now();
   const timeDiff = targetDate - nowUTC;
 

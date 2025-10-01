@@ -6,7 +6,6 @@ burgerToggle.addEventListener("change", function () {
     body.classList.add("no-scroll");
   } else {
     body.classList.remove("no-scroll");
-    // window.alert("не отмечен");
   }
 });
 

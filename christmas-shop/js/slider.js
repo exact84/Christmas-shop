@@ -1,10 +1,9 @@
-// const body = document.body; Уже объявлен в menu
 const btnRight = document.getElementById("btnRight");
 const btnLeft = document.getElementById("btnLeft");
 const VectorRight = document.getElementById("VectorRight");
 const VectorLeft = document.getElementById("VectorLeft");
 
-const slider = document.querySelector(".slider-slider"); //class="slider-slider"
+const slider = document.querySelector(".slider-slider");
 
 btnRight.onclick = right;
 btnLeft.onclick = left;
@@ -16,9 +15,6 @@ let widthSlider = slider.offsetWidth;
 let clicks = widthVisble > 768 ? 3 : 6;
 let step = (widthSlider - widthVisble) / clicks;
 let position = 0;
-// console.log(
-//   `widthVisble: ${widthVisble}, widthSlider: ${widthSlider}, clicks: ${clicks}`
-// );
 
 function right() {
   position -= step;
@@ -56,9 +52,6 @@ function resize() {
   step = (widthSlider - widthVisble) / clicks;
   widthVisble = section.offsetWidth;
   widthSlider = slider.offsetWidth;
-  // console.log(
-  //   `widthVisble: ${widthVisble}, widthSlider: ${widthSlider}, clicks: ${clicks}`
-  // );
   btnLeft.classList.remove("slider-button-activ");
   VectorLeft.setAttribute("stroke-opacity", "0.3");
   btnRight.classList.add("slider-button-activ");
@@ -69,15 +62,7 @@ function resize() {
 const mediaQuery = window.matchMedia("(max-width: 768px)");
 
 function handleDeviceChange(e) {
-  // if (e.matches) {
-  //   console.log("Включён мобильный режим");
-  // } else {
-  //   console.log("Включён десктопный режим");
-  // }
   resize();
-  // console.log(
-  //   `widthVisble: ${widthVisble}, widthSlider: ${widthSlider}, clicks: ${clicks}`
-  // );
 }
 
 mediaQuery.addEventListener("change", handleDeviceChange);

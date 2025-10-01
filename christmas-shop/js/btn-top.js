@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  showHideButton(); // иногда не срабатывает событие DOMContentLoaded
+  showHideButton();
 
   btnTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });

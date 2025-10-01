@@ -64,7 +64,6 @@ fetch("../gifts.json" || "/gifts.json")
     document
       .getElementById("gifts-cards")
       .addEventListener("click", function (event) {
-        // alert(`нажато! ${container}`);
         const container = event.target.closest(".gifts-card");
         if (flag) {
           flag = false;
@@ -145,7 +144,6 @@ fetch("../gifts.json" || "/gifts.json")
 
     closeBtn.addEventListener("click", function () {
       // Закрыть модальное окно
-      // alert("отжато!");
       flag = true;
       modalWindow.classList.remove("show");
       overlay.classList.remove("show");
@@ -170,8 +168,6 @@ fetch("../gifts.json" || "/gifts.json")
 
     // фильтр подарков
     const tabs = document.getElementsByClassName("gifts-tab");
-    // const tabAll = document.querySelector(".gifts-tab");
-    // tabAll.style.background = "";
     for (let tab of tabs) {
       tab.addEventListener("click", function () {
         for (let tab of tabs) {
@@ -183,5 +179,5 @@ fetch("../gifts.json" || "/gifts.json")
     }
   })
   .catch((error) => {
-    console.error("Ошибка загрузки JSON:", error);
+    console.error("Error loading JSON:", error);
   });

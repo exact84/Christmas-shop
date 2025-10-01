@@ -62,11 +62,9 @@ fetch("./gifts.json")
     document
       .getElementById("best-cards")
       .addEventListener("click", function (event) {
-        // alert(`нажато! ${container}`);
         const container = event.target.closest(".best-card");
         if (flag) {
           flag = false;
-          // console.log(container);
           const id = container.id;
           const card = cards[id];
 
@@ -144,7 +142,6 @@ fetch("./gifts.json")
 
     closeBtn.addEventListener("click", function () {
       // Закрыть модальное окно
-      // alert("отжато!");
       flag = true;
       modalWindow.classList.remove("show");
       overlay.classList.remove("show");
